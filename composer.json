@@ -1,0 +1,45 @@
+{
+    "name": "hwacom/entrust",
+    "description": "This package provides a flexible way to add role-based permissions to Laravel and extends from Zizaco/entrust and Trebol/entrust",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ryan",
+            "email": "ryan2.lin@hwacom.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "dev-master",
+        "mockery/mockery": "dev-master",
+        "sami/sami": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+          "src/commands"
+        ],
+        "psr-4": {
+            "Hwacom\\Entrust\\": "src/Entrust/"
+        }
+    },
+    "extra":{
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel":{
+            "providers":[
+                "Hwacom\\Entrust\\EntrustServiceProvider"
+            ],
+            "aliases":{
+                "Entrust": "Hwacom\\Entrust\\EntrustFacade"
+            }
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+          "tests/Middleware/MiddlewareTest.php"
+        ]
+    }
+}
