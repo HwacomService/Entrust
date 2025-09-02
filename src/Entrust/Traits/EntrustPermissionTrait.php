@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust\Traits;
+<?php
+
+namespace Hwacom\Entrust\Traits;
 
 /**
  * This file is part of Entrust,
@@ -33,7 +35,7 @@ trait EntrustPermissionTrait
     {
         parent::boot();
 
-        static::deleting(function($permission) {
+        static::deleting(function ($permission) {
             if (!method_exists(Config::get('entrust.permission'), 'bootSoftDeletes')) {
                 $permission->roles()->sync([]);
             }

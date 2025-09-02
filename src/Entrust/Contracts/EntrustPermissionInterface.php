@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust\Contracts;
+<?php
+
+namespace Hwacom\Entrust\Contracts;
 
 /**
  * This file is part of Entrust,
@@ -10,7 +12,6 @@
 
 interface EntrustPermissionInterface
 {
-
     /**
      * Many-to-Many relations with role model.
      *

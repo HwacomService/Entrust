@@ -9,8 +9,10 @@
             "email": "ryan2.lin@hwacom.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {},
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.3",
+    },
     "require-dev": {
         "phpunit/phpunit": "dev-master",
         "mockery/mockery": "dev-master",

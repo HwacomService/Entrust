@@ -14,7 +14,7 @@ class EntrustTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->nullFilterTest = function($filterClosure) {
+        $this->nullFilterTest = function ($filterClosure) {
             if (!($filterClosure instanceof Closure)) {
                 return false;
             }
@@ -24,7 +24,7 @@ class EntrustTest extends PHPUnit_Framework_TestCase
             return true;
         };
 
-        $this->abortFilterTest = function($filterClosure) {
+        $this->abortFilterTest = function ($filterClosure) {
             if (!($filterClosure instanceof Closure)) {
                 return false;
             }
@@ -41,7 +41,7 @@ class EntrustTest extends PHPUnit_Framework_TestCase
             return false;
         };
 
-        $this->customResponseFilterTest = function($filterClosure) {
+        $this->customResponseFilterTest = function ($filterClosure) {
             if (!($filterClosure instanceof Closure)) {
                 return false;
             }
@@ -397,7 +397,12 @@ class EntrustTest extends PHPUnit_Framework_TestCase
      * @dataProvider routeNeedsRoleOrPermissionFilterDataProvider
      */
     public function testFilterGeneratedByRouteNeedsRoleOrPermission(
-        $roleIsValid, $permIsValid, $filterTest, $requireAll = false, $abort = false, $expectedResponse = null
+        $roleIsValid,
+        $permIsValid,
+        $filterTest,
+        $requireAll = false,
+        $abort = false,
+        $expectedResponse = null
     ) {
         $app         = m::mock('Illuminate\Foundation\Application');
         $app->router = m::mock('Route');

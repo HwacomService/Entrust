@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust;
+<?php
+
+namespace Hwacom\Entrust;
 
 /**
  * This class is the main entry point of entrust. Usually the interaction
@@ -173,7 +175,7 @@ class Entrust
      */
     public function routeNeedsRoleOrPermission($route, $roles, $permissions, $result = null, $requireAll = false)
     {
-        $filterName  =      is_array($roles)       ? implode('_', $roles)       : $roles;
+        $filterName  =      is_array($roles) ? implode('_', $roles) : $roles;
         $filterName .= '_'.(is_array($permissions) ? implode('_', $permissions) : $permissions);
         $filterName .= '_'.substr(md5($route), 0, 6);
 

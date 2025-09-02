@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust\Contracts;
+<?php
+
+namespace Hwacom\Entrust\Contracts;
 
 /**
  * This file is part of Entrust,
@@ -34,13 +36,13 @@ interface EntrustRoleInterface
      */
     public function savePermissions($inputPermissions);
 
-     /**
-     * Attach permission to current role.
-     *
-     * @param object|array $permission
-     *
-     * @return void
-     */
+    /**
+    * Attach permission to current role.
+    *
+    * @param object|array $permission
+    *
+    * @return void
+    */
     public function attachPermission($permission);
 
     /**

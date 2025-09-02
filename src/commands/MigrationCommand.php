@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust;
+<?php
+
+namespace Hwacom\Entrust;
 
 /**
  * This file is part of Entrust,
@@ -42,7 +44,7 @@ class MigrationCommand extends Command
         $permissionRoleTable = Config::get('entrust.permission_role_table');
 
         $this->line('');
-        $this->info( "Tables: $rolesTable, $roleUserTable, $permissionsTable, $permissionRoleTable" );
+        $this->info("Tables: $rolesTable, $roleUserTable, $permissionsTable, $permissionRoleTable");
 
         $message = "A migration that creates '$rolesTable', '$roleUserTable', '$permissionsTable', '$permissionRoleTable'".
         " tables will be created in database/migrations directory";

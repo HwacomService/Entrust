@@ -1,4 +1,6 @@
-<?php namespace Hwacom\Entrust;
+<?php
+
+namespace Hwacom\Entrust;
 
 /**
  * This file is part of Entrust,
